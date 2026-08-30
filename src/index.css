@@ -1,0 +1,183 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Lora', Georgia, serif;
+    --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+    --color-paper: #F7F5EF;
+    --color-card: #FFFFFF;
+    --color-ink: #21261F;
+    --color-secondary: #6B6F66;
+    --color-blue: #3B5BA5;
+    --color-red: #C1442B;
+    --color-mint: #7FA98C;
+    --color-hairline: #DEDACE;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+.serif-font, .font-serif {
+  font-family: 'Lora', Georgia, serif;
+}
+
+.sans-font, .font-sans {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.mono-font, .font-mono {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+}
+
+/* Card shadow & structure from Vibrant Palette */
+.card-shadow {
+  box-shadow: 0 2px 0 #DEDACE;
+}
+
+.school-card {
+  border: 1px solid #DEDACE;
+  border-top: 4px solid #21261F;
+  background: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 2px 0 #DEDACE;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.school-card:hover {
+  box-shadow: 0 4px 0 #DEDACE;
+}
+
+/* Stamp styles */
+.stamp {
+  border: 1px dashed #21261F;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 2px 6px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.stamp-open {
+  border: 1.5px dashed #3B5BA5;
+  color: #3B5BA5;
+  background-color: rgba(59, 91, 165, 0.08);
+}
+
+.stamp-full {
+  border: 1.5px dashed #C1442B;
+  color: #C1442B;
+  background-color: rgba(193, 68, 43, 0.08);
+}
+
+.stamp-mint {
+  border: 1.5px dashed #557c61;
+  color: #2e5339;
+  background-color: rgba(127, 169, 140, 0.15);
+}
+
+/* Vibrant Palette Action Buttons */
+.btn-blue {
+  background-color: #3B5BA5;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-blue:hover {
+  background-color: #2e4987;
+}
+
+.btn-blue:active {
+  transform: translateY(1px);
+}
+
+.btn-red {
+  background-color: #C1442B;
+  color: #FFFFFF;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+  cursor: pointer;
+}
+
+.btn-red:hover {
+  background-color: #a8361f;
+}
+
+.btn-red:active {
+  transform: translateY(1px);
+}
+
+/* Category Filter Pills */
+.filter-pill {
+  border: 1px solid #DEDACE;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  background-color: #FFFFFF;
+  color: #21261F;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+  border-color: #6B6F66;
+  background-color: #F7F5EF;
+}
+
+.filter-pill-active {
+  background-color: #21261F;
+  color: #FFFFFF;
+  border-color: #21261F;
+}
+
+.filter-pill-active:hover {
+  background-color: #3B5BA5;
+  border-color: #3B5BA5;
+  color: #FFFFFF;
+}
+
+/* Notebook paper aesthetic subtle grid / ruled lines */
+.bg-notebook-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(222, 218, 206, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(222, 218, 206, 0.45) 1px, transparent 1px);
+}
+
+.bg-notebook-ruled {
+  background-size: 100% 28px;
+  background-image: linear-gradient(to bottom, transparent 27px, rgba(222, 218, 206, 0.6) 28px);
+}
+
+.bg-notebook-dots {
+  background-image: radial-gradient(rgba(107, 111, 102, 0.25) 1px, transparent 1px);
+  background-size: 16px 16px;
+}

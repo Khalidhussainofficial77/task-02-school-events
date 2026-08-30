@@ -1,0 +1,6 @@
+{
+  "name": "School Events",
+  "description": "A notebook-inspired school events prototype with event grids, category filters, featured activity banners, and event registration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
